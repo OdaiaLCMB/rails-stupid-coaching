@@ -1,0 +1,28 @@
+<div class="text">
+	<p><%= @answer %></p>
+	<p> - me</p>	
+</div>
+
+<div class="text">
+	<% if @answer.downcase == "I am going to work right now!" %>
+	<p></p>
+	<% elsif @answer.end_with?("?") %>
+	<p>Silly question, get dressed and go to work! </p>
+	<% else %>
+	<p>I don't care, get dressed and go to work!</p>
+	<% end %>
+	<p> - coach</p>	
+</div>
+
+<div class="link"><%= link_to "Ask a new question", ask_path %></div>
+
+<!-- answer = coach_answer(your_message)
+  if answer != ""
+    if your_message.upcase == your_message
+      "I can feel your motivation! #{answer}"
+    else
+      answer
+    end
+  else
+    ""
+  end -->
